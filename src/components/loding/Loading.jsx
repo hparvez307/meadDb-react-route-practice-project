@@ -5,13 +5,13 @@ import { useNavigation } from 'react-router-dom';
 const Loading = () => {
     const navigation = useNavigation();
     return (
-        <div
+      <div
         id="detail"
         className={
-          navigation.state === "loading" ? '': ""
+          navigation.state === 'loading' && "loading" 
         }
       >
-       
+        
       </div>
     );
 };
