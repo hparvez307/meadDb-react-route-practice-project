@@ -8,13 +8,7 @@ const Loading = () => {
         <div
         id="detail"
         className={
-          navigation.state === "loading" ?
-
-          'animate-spin h-5 w-5 mr-3  loading' 
-           
-           
-           
-           : ""
+          navigation.state === "loading" ? '': ""
         }
       >
        

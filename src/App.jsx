@@ -13,9 +13,10 @@ function App() {
     <div className="App">
     <Header></Header>
      
-     <Loading></Loading>
+    <Loading></Loading>
       
    <Outlet></Outlet>
+   
   
     </div>
   )

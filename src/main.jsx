@@ -10,6 +10,7 @@ import Home from '../src/components/home/Home'
 import About from './components/about/About';
 import Food from './components/food/Food';
 import ErrorPage from './components/errorPage/ErrorPage';
+import FoodDetails from './components/foodDetails/FoodDetails';
 
 const router = createBrowserRouter([
 
@@ -28,7 +29,12 @@ const router = createBrowserRouter([
       {
         path: 'food',
         element: <Food></Food>,
-        loader: () => fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
+        loader: () => fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=b')
+      },
+      {
+        path: 'food/:foodId',
+        element: <FoodDetails></FoodDetails>,
+        loader: ({params}) => fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.foodId}`)
       },
       {
         path: '*',
